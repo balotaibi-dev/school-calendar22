@@ -35,47 +35,68 @@ body {
   background: #fff;
 }
 
-.calendar-title {
-  color: #39b5a5;
-  text-align: center;
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
+.calendar-controls {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
 }
-
-.calendar-table {
-  border-collapse: collapse;
-  width: 100%;
-  max-width: 850px;
-  background: #f6fff8;
-  border-radius: 14px;
-  box-shadow: 0 2px 12px #d8f3dc44;
-  overflow: hidden;
-  margin-bottom: 30px;
-}
-
-.calendar-table th,
-.calendar-table td {
-  border: 1px solid #a5e6fa;
-  padding: 13px 5px;
-  text-align: center;
+.calendar-controls button {
+  padding: 8px 18px;
+  color: #fff;
+  background: #39b5a5;
+  border: none;
+  border-radius: 4px;
   font-size: 1rem;
+  cursor: pointer;
+  transition: background .2s;
 }
-
-.calendar-table th {
-  background: #ffe066;
+.calendar-controls button:hover {
+  background: #27805e;
+}
+#monthYear {
+  font-size: 1.1rem;
   color: #1a5d3b;
   font-weight: bold;
 }
 
+#calendar {
+  margin-top: 10px;
+  width: 100%;
+  max-width: 600px;
+  background: #f6fff8;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px #d8f3dc44;
+  padding: 18px;
+  direction: rtl;
+}
+
+.calendar-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+.calendar-table th, .calendar-table td {
+  border: 1px solid #a5e6fa;
+  padding: 12px 0;
+  text-align: center;
+  font-size: 1rem;
+  height: 40px;
+}
+.calendar-table th {
+  background: #ffe066;
+  color: #1a5d3b;
+}
 .calendar-table td {
   background: #fff;
 }
 
-.event {
-  background: #dff7ea;
-  color: #27805e;
-  border-radius: 7px;
+.today {
+  background: #dff7ea !important;
   font-weight: bold;
+  color: #27805e;
+  border-radius: 4px;
 }
 
 footer {
@@ -89,10 +110,8 @@ footer {
   line-height: 2;
 }
 
-@media (max-width: 900px) {
-  .calendar-table, .calendar-table th, .calendar-table td {
-    font-size: 0.9rem;
-  }
+@media (max-width: 700px) {
   .header img { width: 80px; }
   .header h1 { font-size: 1.3rem; }
+  #calendar { padding: 5px; }
 }
